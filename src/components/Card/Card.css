@@ -1,0 +1,129 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+}
+h1 {
+  margin: auto;
+}
+.inbox2 {
+  width: 250px;
+}
+.inbox2 h2 {
+  text-align: center;
+}
+
+button {
+  width: 160px;
+  align-items: center;
+  border: none;
+  background: dodgerblue;
+  height: 40px;
+  border-radius: 2px;
+  color: white;
+}
+.Card {
+  color: #fff;
+}
+.inbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.card {
+  height: 95vh;
+  background-image: url(./img/1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.incard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  margin: auto;
+}
+
+h3 {
+  color: #fff;
+}
+
+.box h1 {
+  font-size: 20px;
+}
+.box h2 {
+  font-size: 15px;
+}
+.imgg {
+  width: 200px;
+}
+.in_h2 {
+  width: 300px;
+}
+.in_bt {
+  margin: auto;
+}
+.in_h2 h2 {
+  text-align: center;
+}
+.btn {
+  margin: auto;
+}
+.btn a {
+  margin: auto;
+}
+.box {
+  width: 400px;
+}
+.imgg {
+  width: 300px;
+}
+
+.proimg {
+  width: 300px;
+}
+@media (max-width: 400px) {
+  button {
+    transform: translateX(0);
+    margin-top: 3%;
+  }
+  .proimg {
+    transform: translateY(-100px);
+  }
+  .incard {
+    display: flex;
+    flex-direction: column;
+  }
+  .box {
+    margin-top: -300px;
+  }
+  .inbox h1 {
+    font-size: 15px;
+  }
+  .in_h2 h2 {
+    font-size: 13px;
+  }
+  .in_btn {
+    width: 100px;
+    height: 30px;
+  }
+  .in_btn button {
+    font-size: 11px;
+    margin-top: 20px;
+  }
+  .imgg {
+    width: 200px;
+    margin: auto;
+  }
+  .card {
+    overflow: hidden;
+  }
+}

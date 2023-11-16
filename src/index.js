@@ -1,12 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import App from "./App";
 import Navbar from "./components/Navbar/Navbar";
-import Project from "./components/project/Project";
-import Footer from "./components/Footer/Footer";
-import About from "./components/About/About";
+import Sign_in from "./Pages/Sign_in/Sign_in";
+import Add from "./Pages/Add/Add"
+import Istoria from "./Pages/Istoria/Istoria";
+import EditEmployee from "./Pages/Edit/AddEmployee";
+import Sign_up from "./Pages/Sign_up/Sign_up";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,11 +16,12 @@ root.render(
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="project" element={<Project />} />
-        <Route path="about" element={<About />} />
+        <Route path="add" element={<Add />} />
+        <Route path="/istoria" element={<Istoria />} />
+        <Route path='/editemployee/:empid' element={<EditEmployee />} />
+        <Route path='/sign_in' element={<Sign_in />} />
+        <Route path='/sign_up' element={<Sign_up />} />
       </Routes>
-      <Footer />
     </BrowserRouter>
   </React.StrictMode>
 );

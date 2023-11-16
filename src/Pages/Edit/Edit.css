@@ -1,0 +1,38 @@
+.form {
+    background-color: #cccccc48;
+}
+
+.form1 {
+    background: rgba(145, 167, 219, 0.575);
+    background: linear-gradient(145deg, rgb(189, 189, 189) 0%, rgb(133, 133, 133) 50%, rgb(80, 80, 80) 100%);
+}
+
+.form {
+    background: rgba(145, 167, 219, 0.575);
+    background: linear-gradient(145deg, rgb(189, 189, 189) 0%, rgb(133, 133, 133) 50%, rgb(80, 80, 80) 100%);
+    margin-top: 0;
+}
+
+.label1 {
+    color: #000;
+}
+
+.label2 {
+    color: #000;
+}
+
+.label3 {
+    color: #000;
+}
+
+.label4 {
+    color: #000;
+}
+
+.label5 {
+    color: #000
+}
+
+.label6 {
+    color: #000;
+}

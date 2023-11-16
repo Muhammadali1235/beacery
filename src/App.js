@@ -1,10 +1,9 @@
-import "./App.css";
-import Card from "./components/card/Card";
+import React from "react";
+import "./index.css";
+
 function App() {
   return (
-    <div className="App">
-      <Card />
-    </div>
+    <div></div>
   );
 }
 

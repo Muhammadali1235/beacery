@@ -1,21 +1,45 @@
-import React from 'react'
+import React, { useState } from 'react';
+import axios from '../../Api/Axios';
+import './Sign_up.css'
+import { Link } from 'react-router-dom';
 
-function Sign_up() {
+const App = () => {
+    const [registrationData, setRegistrationData] = useState({
+        email: '',
+        name: '',
+        lastname: '',
+        username: '',
+        password: ''
+    });
+
+    const handleRegistrationSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await axios.post('/user/register', registrationData);
+            console.log(response.data);
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
     return (
-        <div className='form text-black mt-[100px] w-[100%] h-[100vh] flex items-center justify-center mt-0 '>
-            <div className=" w-[400px] h-[400px] border-[2px] flex items-center justify-center ">
-                <form action="" className='flex flex-col w-[300px] h-[350px]  justify-around text-left '>
-                    <label htmlFor="">Email</label>
-                    <input type="email" name="" id="" placeholder='Email' className='w-[300px] m-auto h-[30px] ' />
-                    <label htmlFor="">Name</label>
-                    <input type="text" placeholder='Name' className='w-[300px] m-auto h-[30px] ' />
-                    <label htmlFor="">Lastname</label>
-                    <input type="text" placeholder='Lastname' className='w-[300px] m-auto h-[30px] ' />
-                    <button className='bg-[#ccc] w-[300px] m-auto h-[30px] '>Submit</button>
-                </form>
-            </div>
-        </div>
-    )
-}
+        <div className='mt-[100px] '>
+            <h1>Registration</h1>
+            <form className='w-[400px] h-[400px] flex flex-col items-center justify-around ' onSubmit={handleRegistrationSubmit}>
+                <label>Email:</label>
+                <input type="email" name="" id="" value={registrationData.email} placeholder='Email' className='w-[300px] h-[40px] ' onChange={(e) => setRegistrationData({ ...registrationData, email: e.target.value })} />
+                <input type="text" value={registrationData.name} placeholder='Name' className='w-[300px] h-[40px] ' onChange={(e) => setRegistrationData({ ...registrationData, name: e.target.value })} />
+                <input type="text" value={registrationData.lastname} placeholder='Lastname' className='w-[300px] h-[40px] ' onChange={(e) => setRegistrationData({ ...registrationData, lastname: e.target.value })} />
+                <input type="text" value={registrationData.username} placeholder='Username' className='w-[300px] h-[40px] ' onChange={(e) => setRegistrationData({ ...registrationData, username: e.target.value })} />
+                <input type="text" value={registrationData.password} placeholder='Password' className='w-[300px] h-[40px] ' onChange={(e) => setRegistrationData({ ...registrationData, password: e.target.value })} />
+                <Link to={`/${registrationData.username}`}>register</Link>
+            </form>
 
-export default Sign_up
+            <h1>Login</h1>
+
+        </div>
+    );
+};
+
+export default App;

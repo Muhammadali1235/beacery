@@ -1,0 +1,11 @@
+input {
+    border: 2px solid #ccc;
+}
+
+.con {
+    background-image: radial-gradient(circle, #5c0067 0%, #00d5ff75 100%);
+}
+
+label {
+    color: #fff;
+}

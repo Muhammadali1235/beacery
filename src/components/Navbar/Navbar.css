@@ -1,0 +1,25 @@
+@media (max-width:550px) {
+    img {
+        font-size: 20px;
+    }
+
+    .ul {
+        display: none;
+    }
+}
+
+div {
+    color: black;
+}
+
+@media (max-width:600px) {
+    a {
+        font-size: 11px;
+        border-bottom: 2px solid red;
+    }
+
+    /* .ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    } */
+}

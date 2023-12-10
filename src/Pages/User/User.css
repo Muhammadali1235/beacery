@@ -1,0 +1,16 @@
+@media (max-width:425px) {
+    .span {
+        display: grid;
+    }
+
+    .container2 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.incon {
+    display: flex;
+    flex-direction: column;
+}
+

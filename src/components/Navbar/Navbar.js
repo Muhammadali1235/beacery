@@ -1,19 +1,20 @@
 import React from 'react'
+import "./Navbar.css"
 import img1 from '../../images/Logo 1.png'
 import Search from '../../Pages/Search/Search'
 function Navbar() {
     return (
-        <div className='w-[100%] flex justify-center text-black'>
+        <div className='m:"w-[100%] flex justify-center text-black"'>
             <div className="w-[85%] flex border-[2px] items-center justify-between m-auto fixed bg-white top-0">
                 <div className="logo">
                     <h1 className='text-xl'>
                         <a href="/">
-                            <img className='w-[100px]' src={img1} alt="" />
+                            <img className='w-[100px] ' src={img1} alt="" />
                         </a>
                     </h1>
                 </div>
-                <Search />
-                <ul className='flex w-[700px] items-center justify-around text-xl d-none '>
+                <ul className='ul flex w-[700px] items-center justify-around text-xl display-none min-w-md text-xs max-w-5xl text-[16px] max-w-3xl text-sm max-w-5xl text-xl '>
+                    <div className=""></div>
                     <li>
                         <a href="/">Home</a>
                     </li>
